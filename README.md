@@ -1,5 +1,6 @@
 Tshiamo Maforah ST10439113
 
+https://github.com/St10439113/MyWeatherMan/commit/db4b6eb6411b6256a083615c95ec265f7a88c303
 https://github.com/St10439113/MyWeatherMan/tree/master
 
 The purpose of my weather app is for a local areas weather giving the user the average temperature for the week and it also has detailed information for each day for the user in their local area
