@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00BCD4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/headingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Enter The Weathers Temp:"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/dayEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headingTextView"
+        android:layout_marginTop="16dp"
+        android:hint="Day (e.g., 2024-04-02)" />
+
+    <EditText
+        android:id="@+id/yesterdayTempEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dayEditText"
+        android:layout_marginTop="8dp"
+        android:hint="Yesterday Temp(*C)" />
+
+    <EditText
+        android:id="@+id/todayTempEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yesterdayTempEditText"
+        android:layout_marginTop="8dp"
+        android:hint="Today Temp (*C)" />
+
+    <EditText
+        android:id="@+id/activityNotesEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/todayTempEditText"
+        android:layout_marginTop="8dp"
+        android:hint="Activity Notes" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activityNotesEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submitButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Clear" />
+
+    <Button
+        android:id="@+id/detailedViewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clearButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Detailed View" />
+
+</RelativeLayout>
