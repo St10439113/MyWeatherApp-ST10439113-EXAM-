@@ -8,14 +8,14 @@
 
     <TextView
         android:id="@+id/weatherHeadingTextView"
-        android:layout_width="258dp"
-        android:layout_height="97dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="287dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="255dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="82dp"
         android:text="Detailed Weather Data"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -24,12 +24,12 @@
         android:id="@+id/weatherDetailsTextView"
         android:layout_width="744dp"
         android:layout_height="287dp"
-        android:layout_below="@id/weatherHeadingTextView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="87dp"
-        android:layout_marginEnd="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="179dp"
         android:padding="16dp"
         android:textSize="16sp" />
 
@@ -37,12 +37,13 @@
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/weatherDetailsTextView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="331dp"
-        android:layout_marginTop="232dp"
-        android:layout_marginEnd="332dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="115dp"
         android:text="Back to Home" />
 
 </RelativeLayout>

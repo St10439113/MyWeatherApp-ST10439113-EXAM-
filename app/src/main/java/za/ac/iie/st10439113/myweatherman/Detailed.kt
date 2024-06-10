@@ -20,11 +20,12 @@ class DetailedViewActivity : AppCompatActivity() {
         val details = StringBuilder()
         var totalWeatherTemp = 0
         for (data in weatherDataList) {
-            details.append("${data.day}: Morning - ${data.morningScreenTime} degree celsius, Afternoon - ${data.afternoonScreenTime} degree celsius \nActivity Notes: ${data.activityNotes}\n\n")
-            totalWeatherTemp += data.morningScreenTime + data.afternoonScreenTime
+            details.append("${data.day}: Morning - ${data.yesterdayTemp} degree celsius, Afternoon - ${data.todayTemp} degree celsius \nActivity Notes: ${data.activityNotes}\n\n")
+            totalWeatherTemp += data.yesterdayTemp + data.todayTemp
         }
-        val averageScreenTime = if (weatherDataList.isNotEmpty()) totalWeatherTemp / weatherDataList.size else 0
-        details.append("Average Weather Temp: $averageScreenTime *C")
+        //IF function for average week temp
+        val averageWeekWeather = if (weatherDataList.isNotEmpty()) totalWeatherTemp / weatherDataList.size else 0
+        details.append("Average Weather Temp: $averageWeekWeather *C")
 
         weatherDetailsTextView.text = details.toString()
 

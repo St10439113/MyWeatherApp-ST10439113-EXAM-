@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val dayEditText = findViewById<EditText>(R.id.dayEditText)
-        val morningScreenTimeEditText = findViewById<EditText>(R.id.yesterdayTempEditText)
-        val afternoonScreenTimeEditText = findViewById<EditText>(R.id.todayTempEditText)
+        val yesterdayTempEditText = findViewById<EditText>(R.id.yesterdayTempEditText)
+        val todayTempEditText = findViewById<EditText>(R.id.todayTempEditText)
         val activityNotesEditText = findViewById<EditText>(R.id.activityNotesEditText)
         val submitButton = findViewById<Button>(R.id.submitButton)
         val clearButton = findViewById<Button>(R.id.clearButton)
@@ -25,12 +25,12 @@ class MainActivity : AppCompatActivity() {
 
         submitButton.setOnClickListener {
             val day = dayEditText.text.toString()
-            val morningScreenTime = morningScreenTimeEditText.text.toString().toIntOrNull()
-            val afternoonScreenTime = afternoonScreenTimeEditText.text.toString().toIntOrNull()
+            val yesterdayTemp = yesterdayTempEditText.text.toString().toIntOrNull()
+            val todayTemp = todayTempEditText.text.toString().toIntOrNull()
             val activityNotes = activityNotesEditText.text.toString()
 
-            if (day.isNotEmpty() && morningScreenTime != null && afternoonScreenTime != null && activityNotes.isNotEmpty()) {
-                val screenTimeData = WeatherTemp(day, morningScreenTime, afternoonScreenTime, activityNotes)
+            if (day.isNotEmpty() && yesterdayTemp != null && todayTemp != null && activityNotes.isNotEmpty()) {
+                val screenTimeData = WeatherTemp(day, yesterdayTemp, todayTemp, activityNotes)
                 screenTimeDataList.add(screenTimeData)
                 Toast.makeText(this, "Data added successfully", Toast.LENGTH_SHORT).show()
                 clearInputs()
@@ -38,9 +38,9 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             }
         }
-// The code that is commented out will clear all data! Only remove // if this is what must happen.
+// This code will clear all data
         clearButton.setOnClickListener {
-            //screenTimeDataList.clear()
+            //weatherDataList.clear()
             clearInputs()
             //Toast.makeText(this, "Data cleared", Toast.LENGTH_SHORT).show()
         }

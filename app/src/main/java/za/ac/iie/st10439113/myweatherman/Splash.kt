@@ -13,12 +13,12 @@ class Splash : AppCompatActivity() {
 
         val startButton = findViewById<Button>(R.id.startButton)
         val exitButton = findViewById<Button>(R.id.exitButton)
-
+//Code for start button to work
         startButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-
+//code for exit button to work
         exitButton.setOnClickListener {
             finish()
         }
